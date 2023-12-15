@@ -1,31 +1,20 @@
 import { Redis } from './redis';
-import { mocked } from 'jest-mock';
+import { it, describe, expect  } from "bun:test";
 
-jest.mock('ioredis');
+const redis = new Redis('redis://localhost:6379');
 
-describe('Redis', () => {
-  let redis: Redis;
-
-  beforeEach(() => {
-    redis = new Redis('redis://localhost:6379');
-  });
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
-  describe('get', () => {
-    it('should return the value for the given key', async () => {
-      const expected = 'bar';
-      mocked(redis.get).mockResolvedValue(expected);
-      const result = await redis.get('foo');
-      expect(result).toEqual(expected);
-    });
-
-    it('should return null if the key does not exist', async () => {
-      mocked(redis.get).mockResolvedValue(null);
-      const result = await redis.get('foo');
-      expect(result).toBeNull();
-    });
+describe("Redis 1", () => {
+  it("should pass", async () => {
+    expect(redis).toBeDefined();
+    const ping = await redis.ping();
+    expect(ping).toBe("PONG");
+    const key = crypto.randomUUID();
+    const value = crypto.randomUUID();
+    await redis.set(key, value);
+    const result = await redis.get(key);
+    expect(result).toBe(value);
+    await redis.del(key);
+    const deleted = await redis.get(key);
+    expect(deleted).toBeNull();
   });
 });

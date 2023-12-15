@@ -3,18 +3,16 @@
   "version": "1.0.0",
   "author": "Rogerio Lucas",
   "description": "JS Utils",
-  "packageManager": "yarn@4.0.0-rc.53",
   "scripts": {
     "build": "rimraf lib && tsup",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "start": "node dist/src/index.js",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun est --coverage",
     "lint": "eslint -c .eslintrc.cjs --fix ./src/*.ts",
     "format": "prettier --write ./**/*.ts",
     "prepare": "husky install",
     "release": "semantic-release",
-    "release-no-ci": "yarn build; semantic-release --no-ci"
+    "release-no-ci": "bun build; semantic-release --no-ci"
   },
   "husky": {
     "hooks": {
@@ -45,6 +43,7 @@
     "@types/node": "^20.8.7",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
+    "bun-types": "^1.0.18",
     "eslint": "^8.51.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",

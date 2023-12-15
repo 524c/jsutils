@@ -1,4 +1,5 @@
 import { fromBase64, toBase64 } from './encoding';
+import { mock, test, it, describe, expect } from "bun:test";
 
 describe('encoding', () => {
   describe('fromBase64', () => {
