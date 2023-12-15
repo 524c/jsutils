@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "target": "ES2022",
+    "removeComments": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "strictNullChecks": false, 
+    "declaration": true,
+    "declarationDir": "lib/types",
+    "declarationMap": false,
+    "verbatimModuleSyntax": false
+  },
+  "include": [
+    "./src/**/*",
+    "./.eslintrc.js",
+    "./tsup.config.js",
+    "./rollup.config.mjs",
+    "./jest.config.ts"
+  ],
+  "exclude": [
+    "./src/test.ts"
+  ]
+}
