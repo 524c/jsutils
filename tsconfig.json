@@ -2,8 +2,8 @@
   "compilerOptions": {
     "types": ["bun-types"],
     "lib": [
-      "esnext",
-      "dom"
+      "ES2022",
+      "DOM"
     ],
     "target": "ES2022",
     "removeComments": false,

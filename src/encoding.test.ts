@@ -1,5 +1,5 @@
 import { fromBase64, toBase64 } from './encoding';
-import { mock, test, it, describe, expect } from "bun:test";
+import { it, describe, expect } from "bun:test";
 
 describe('encoding', () => {
   describe('fromBase64', () => {
@@ -12,7 +12,7 @@ describe('encoding', () => {
 
     it('should throw an error if the input is not valid base64', async () => {
       const input = 'not-base64';
-      await expect(fromBase64(input)).rejects.toThrow(
+      expect(fromBase64(input)).rejects.toThrow(
         'Could not parse base64 value: not-base64'
       );
     });
@@ -27,7 +27,7 @@ describe('encoding', () => {
     });
 
     it('should throw an error if the input cannot be stringified', async () => {
-      await expect(toBase64(undefined)).rejects.toThrow(
+      expect(toBase64(undefined)).rejects.toThrow(
         // undefined cannot be stringified
         'Could not stringify data'
       );

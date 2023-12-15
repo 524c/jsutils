@@ -1,3 +1,6 @@
+/// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+
 export type CallbackFunction = [(...args: any[]) => any, ...any[]];
 export type FnResult = [boolean, unknown];
 
