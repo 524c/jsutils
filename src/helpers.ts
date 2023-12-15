@@ -133,3 +133,21 @@ export const raceFnRun = async (
     return value;
   });
 };
+
+
+/**
+ *
+ * @param input string to sanitize
+ * @returns sanitized string
+ * @example
+ * sanitizeHtml('<script>alert("hi")</script>')
+ */
+export function sanitizeHtml(input: string) {
+  let sanitized = input.replace(/<[^>]*>/g, "");
+
+  sanitized = sanitized.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+
+  const trimmedString: string = sanitized.trim();
+
+  return trimmedString;
+}
