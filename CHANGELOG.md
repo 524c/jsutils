@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/524c/jsutils/compare/v1.0.1...v1.1.0) (2023-12-15)
+
+
+### Features
+
+* add sanitizeHtml ([6e7a6d4](https://github.com/524c/jsutils/commit/6e7a6d4e362c272ef829383c6e30bc8f393e4f7b))
+
 ## [1.0.1](https://github.com/524c/jsutils/compare/v1.0.0...v1.0.1) (2023-12-15)
 
 
