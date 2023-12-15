@@ -1,6 +1,6 @@
 {
   "name": "@524c/jsutils",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Rogerio Lucas",
   "description": "JS Utils",
   "packageManager": "yarn@4.0.0-rc.53",
