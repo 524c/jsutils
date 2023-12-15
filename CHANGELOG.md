@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/524c/jsutils/compare/v1.0.0...v1.0.1) (2023-12-15)
+
+
+### Bug Fixes
+
+* redis tests ([a7c1a4a](https://github.com/524c/jsutils/commit/a7c1a4a6bed8be282925fb6cca28a34aefd78cd4))
+
 # 1.0.0 (2023-12-15)
 
 
