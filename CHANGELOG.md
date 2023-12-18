@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/524c/jsutils/compare/v1.1.2...v1.1.3) (2023-12-18)
+
+
+### Bug Fixes
+
+* build script in package.json ([b155e9a](https://github.com/524c/jsutils/commit/b155e9a5ee33a611c7d0544c4a543796f8877db1))
+
 # [1.1.0](https://github.com/524c/jsutils/compare/v1.0.1...v1.1.0) (2023-12-15)
 
 
