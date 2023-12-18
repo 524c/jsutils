@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/524c/jsutils/compare/v1.1.3...v1.1.4) (2023-12-18)
+
+
+### Bug Fixes
+
+* try fix build ([29b71bc](https://github.com/524c/jsutils/commit/29b71bce5c432384e3362552512593fd52fe303d))
+
 ## [1.1.3](https://github.com/524c/jsutils/compare/v1.1.2...v1.1.3) (2023-12-18)
 
 
