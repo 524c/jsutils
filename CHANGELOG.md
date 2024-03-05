@@ -1,3 +1,10 @@
+## [1.0.2-beta.2](https://github.com/524c/jsutils/compare/v1.0.2-beta.1...v1.0.2-beta.2) (2024-03-05)
+
+
+### Bug Fixes
+
+* force update version ([d8068bf](https://github.com/524c/jsutils/commit/d8068bf97ddd9758c039b20ccd702ed77ddb4d51))
+
 ## [1.0.2-beta.1](https://github.com/524c/jsutils/compare/v1.0.1...v1.0.2-beta.1) (2024-03-05)
 
 
