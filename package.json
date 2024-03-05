@@ -1,6 +1,6 @@
 {
   "name": "@524c/jsutils",
-  "version": "1.4.2",
+  "version": "1.4.4",
   "author": "Rogerio Lucas",
   "description": "JS Utilities",
   "license": "ISC",
@@ -77,8 +77,8 @@
     "redis",
     "logger",
     "customFetch",
+    "chunk-*.js",
     "index.js",
-    "index.cjs",
     "index.d.ts",
     "package.json",
     "README.md"
