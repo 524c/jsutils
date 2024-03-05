@@ -1,3 +1,10 @@
+# 1.0.0 (2024-03-05)
+
+
+### Bug Fixes
+
+* update version ([6b32217](https://github.com/524c/jsutils/commit/6b32217fa674f2aafa173eaaebdec2c27e50b9b5))
+
 ## [1.4.3-beta.1](https://github.com/524c/jsutils/compare/v1.4.2-beta.2...v1.4.3-beta.1) (2024-03-05)
 
 
