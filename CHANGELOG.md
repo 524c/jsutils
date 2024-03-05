@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/524c/jsutils/compare/v1.0.0...v1.0.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* force update version ([cf5e641](https://github.com/524c/jsutils/commit/cf5e64122a6d715ac629c3842d638c096500b4cb))
+
 # 1.0.0 (2024-03-05)
 
 
