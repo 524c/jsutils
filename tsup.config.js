@@ -5,7 +5,7 @@ export default defineConfig([
   {
     entry: await glob('./src/**/!(*.d|*.spec|*.test|test).ts'),
     target: 'ES2022',
-    format: ['esm', 'cjs'],
+    format: ['esm'],
     splitting: true,
     sourcemap: false,
     declaration: true,
