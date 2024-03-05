@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/524c/jsutils/compare/v1.0.1...v1.1.0) (2024-03-05)
+
+
+### Bug Fixes
+
+* force update version ([d8068bf](https://github.com/524c/jsutils/commit/d8068bf97ddd9758c039b20ccd702ed77ddb4d51))
+* force update version ([70c3a07](https://github.com/524c/jsutils/commit/70c3a0722b957d455423f263aa1fc3777c9e184f))
+
+
+### Features
+
+* release v1.0.0 ([4646f0b](https://github.com/524c/jsutils/commit/4646f0b22ccc1b6e5ae66c1083eea680518bd4c1))
+
 ## [1.0.2-beta.2](https://github.com/524c/jsutils/compare/v1.0.2-beta.1...v1.0.2-beta.2) (2024-03-05)
 
 
