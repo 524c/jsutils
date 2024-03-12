@@ -135,6 +135,8 @@ class CustomFetch {
         let message: string | undefined;
         if (parsedData && typeof parsedData === 'string' && parsedData !== '') {
           message = `${response.statusText} ${parsedData}`;
+        } else if (parsedData && typeof parsedData === 'object') {
+          message = `${response.statusText} ${JSON.stringify(parsedData)}`;
         }
         throw new CustomError(message || response.statusText, response.status);
       }
