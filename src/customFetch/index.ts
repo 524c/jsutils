@@ -121,9 +121,6 @@ class CustomFetch {
 
       //console.log(absoluteURL, requestOptions);
       const response = await fetch(absoluteURL, requestOptions);
-      if (!response.ok) {
-        throw new CustomError(response.statusText, response.status);
-      }
 
       // NOTE: some web servers return json with content-type: text/plain, so we need to handle that.
       const _data = await response.text();
@@ -132,6 +129,14 @@ class CustomFetch {
         parsedData = JSON.parse(_data);
       } catch (error) {
         parsedData = _data;
+      }
+
+      if (!response.ok) {
+        let message: string | undefined;
+        if (parsedData && typeof parsedData === 'string' && parsedData !== '') {
+          message = `${response.statusText} ${parsedData}`;
+        }
+        throw new CustomError(message || response.statusText, response.status);
       }
 
       return {
