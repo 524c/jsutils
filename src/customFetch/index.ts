@@ -5,7 +5,7 @@ interface RequestOptions {
   body?: string | FormData | URLSearchParams | null;
 }
 
-class CustomError extends Error {
+class CustomFetchError extends Error {
   status?: number;
 
   constructor(message: string, status?: number) {
@@ -82,9 +82,29 @@ class CustomFetch {
     };
 
     // set content type to application/json if not set
-    if (!requestOptions.headers?.['content-type']) {
+    if (
+      !requestOptions.headers?.['content-type'] &&
+      !requestOptions.headers?.['Content-Type']
+    ) {
       requestOptions.headers = requestOptions.headers || {};
       requestOptions.headers['content-type'] = 'application/json';
+    }
+
+    if (!requestOptions.headers?.accept) {
+      requestOptions.headers = requestOptions.headers || {};
+      requestOptions.headers.accept = 'application/json, text/plain, */*';
+    }
+
+    if (!requestOptions.headers?.['accept-language']) {
+      requestOptions.headers = requestOptions.headers || {};
+      requestOptions.headers['accept-language'] = 'en-US,en;q=0.9';
+    }
+
+    if (
+      data === null &&
+      ['POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'].includes(method)
+    ) {
+      requestOptions.headers['content-length'] = '0';
     }
 
     if (
@@ -132,13 +152,17 @@ class CustomFetch {
       }
 
       if (!response.ok) {
+        //console.log('error headers =>', response.headers);
         let message: string | undefined;
         if (parsedData && typeof parsedData === 'string' && parsedData !== '') {
           message = `${response.statusText} ${parsedData}`;
         } else if (parsedData && typeof parsedData === 'object') {
           message = `${response.statusText} ${JSON.stringify(parsedData)}`;
         }
-        throw new CustomError(message || response.statusText, response.status);
+        throw new CustomFetchError(
+          message || response.statusText,
+          response.status
+        );
       }
 
       return {
@@ -158,7 +182,7 @@ class CustomFetch {
 
   async post(
     url: string,
-    data: Record<string, any> | string,
+    data: Record<string, any> | string | FormData | URLSearchParams | null,
     headers: Record<string, string> = {}
   ) {
     return this.request(url, 'POST', headers, data);
@@ -218,6 +242,6 @@ methods.forEach((method) => {
 });
 */
 
-export { CustomFetch as Fetch, CustomError };
+export { CustomFetch as Fetch, CustomFetchError };
 export type { RequestOptions, Response };
 export default CustomFetch.getInstance();
