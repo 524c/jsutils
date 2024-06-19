@@ -1,6 +1,6 @@
 {
   "name": "@524c/jsutils",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "author": "Rogerio Lucas",
   "description": "JS Utilities",
   "license": "ISC",
@@ -34,7 +34,11 @@
   },
   "type": "module",
   "dependencies": {
+    "@panva/hkdf": "^1.2.0",
+    "@types/cookie": "^0.6.0",
+    "cookie": "^0.6.0",
     "ioredis": "^5.3.2",
+    "jose": "^5.4.1",
     "pino": "^8.16.0",
     "pino-pretty": "^10.3.1",
     "prettier": "^3.0.3"
@@ -111,6 +115,11 @@
       "types": "./customFetch/index.d.ts",
       "import": "./customFetch/index.js",
       "require": "./customFetch/index.cjs"
+    },
+    "./jwt": {
+      "types": "./jwt/index.d.ts",
+      "import": "./jwt/index.js",
+      "require": "./jwt/index.cjs"
     },
     "./package.json": "./package.json"
   },
