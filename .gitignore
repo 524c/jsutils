@@ -17,3 +17,4 @@ bun.lockb
 src/test.ts
 .husky/_.husky/pre-commit
 yarn-error.log
+src/auth-core/.turbo/turbo-build.log

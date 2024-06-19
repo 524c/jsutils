@@ -1,6 +1,6 @@
 {
   "name": "@524c/jsutils",
-  "version": "1.4.4",
+  "version": "1.5.3",
   "author": "Rogerio Lucas",
   "description": "JS Utilities",
   "license": "ISC",
@@ -24,7 +24,8 @@
     "format": "prettier --write ./**/*.ts",
     "release": "semantic-release",
     "postbuild": "cp package.json lib",
-    "release-no-ci": "bun run build && semantic-release --no-ci"
+    "release-no-ci": "bun run build && semantic-release --no-ci",
+    "publish": "bun run build; cd lib && npm publish --access public && cd .."
   },
   "husky": {
     "hooks": {
@@ -78,7 +79,9 @@
     "logger",
     "customFetch",
     "chunk-*.js",
+    "chunk-*.cjs",
     "index.js",
+    "index.cjs",
     "index.d.ts",
     "package.json",
     "README.md"
