@@ -1,11 +1,11 @@
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />
 
-import Redis from './redis/index.js';
-import encoding from './encoding/index.js';
-import logger from './logger/index.js';
-import fetch, { Fetch } from './customFetch/index.js';
-import { setCookie, sanitizeHtml } from './customFetch/helpers.js';
+import Redis from './redis';
+import encoding from './encoding';
+import logger from './logger';
+import fetch, { Fetch } from './customFetch';
+import { setCookie, sanitizeHtml } from './customFetch/helpers';
 import {
   deepCopy,
   sleep,
@@ -13,9 +13,10 @@ import {
   raceFnRun,
   isNumber
 } from './misc/helpers.js';
+import { encode, decode } from './jwt';
 
-import type { FnResult, CallbackFunction } from './misc/helpers.js';
-import type { Response } from './customFetch/index.js';
+import type { FnResult, CallbackFunction } from './misc/helpers';
+import type { Response } from './customFetch';
 
 export {
   Redis,
@@ -32,5 +33,7 @@ export {
   isNumber,
   FnResult,
   CallbackFunction,
-  Response
+  Response,
+  encode,
+  decode
 };
