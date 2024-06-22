@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/dot-notation */
-import { Fetch, CustomError } from '.';
+import { Fetch, CustomFetchError } from '.';
 import fetch from '.';
 
 describe('CustomFetch', () => {
@@ -205,7 +205,7 @@ describe('CustomFetch', () => {
       try {
         await customFetch.request(url, 'GET', headers);
       } catch (error) {
-        expect(error).toEqual(new CustomError('NOT FOUND'));
+        expect(error).toEqual(new CustomFetchError('NOT FOUND'));
       }
     });
 
@@ -218,7 +218,7 @@ describe('CustomFetch', () => {
       try {
         await customFetch.request(url, 'GET', headers);
       } catch (error) {
-        expect(error).toEqual(new CustomError('INTERNAL SERVER ERROR'));
+        expect(error).toEqual(new CustomFetchError('INTERNAL SERVER ERROR'));
       }
     });
   });
