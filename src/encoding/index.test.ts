@@ -1,4 +1,4 @@
-import { fromBase64, toBase64 } from '.';
+import { fromBase64, toBase64, enableStringFormat } from '.';
 
 describe('encoding', () => {
   describe('fromBase64', () => {
@@ -30,6 +30,13 @@ describe('encoding', () => {
         // undefined cannot be stringified
         'Could not stringify data'
       );
+    });
+  });
+
+  describe('enableStringFormat', () => {
+    it('should enable string format function', () => {
+      enableStringFormat();
+      expect('Hello {0}{1}'.format('World', '!')).toEqual('Hello World!');
     });
   });
 });
